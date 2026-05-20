@@ -1,0 +1,48 @@
+# Root-level gitignore
+
+# ── Next.js ──
+frontend/.next/
+frontend/out/
+
+# ── Node ──
+node_modules/
+client/
+
+# ── Environment files ──
+.env
+.env.local
+.env.production
+frontend/.env.local
+
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+
+# ── OS ──
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
+
+# ── Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Testing ──
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── Docker ──
+*.log
