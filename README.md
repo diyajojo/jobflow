@@ -17,17 +17,29 @@ Upload your resume once. Get AI-ranked LinkedIn jobs. Apply in one click.
 
 ## 📸 Screenshots
 
-> 🎬 **Demo Video:** _Coming soon — [add your demo video link here]_
-
-<!-- Replace the lines below with actual screenshots once you have them -->
-<!-- Suggested: take screenshots of landing page, dashboard with results, extension popup -->
-
-| Landing Page | Dashboard | Chrome Extension |
+| Landing Page | Guide | Dashboard |
 |:---:|:---:|:---:|
-| ![Landing Page](docs/images/screenshots/landing.png) | ![Dashboard](docs/images/screenshots/dashboard.png) | ![Extension](docs/images/screenshots/extension.png) |
-| _Hero, features overview_ | _Resume upload + AI-ranked jobs_ | _One-click autofill_ |
+| ![Landing Page](docs/images/screenshots/landing.png) | ![Guide](docs/images/screenshots/guide.png) | ![Dashboard](docs/images/screenshots/dashboard.png) | 
+| _Hero, features overview_ | _Step-by step guide_ | _Resume upload + AI-ranked jobs_ |
 
-> 📌 **Contributors:** Screenshots needed! See issue [#XX — Add demo screenshots to README](https://github.com/mehrinshamim/mini-project/issues)
+
+---
+
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [🔄 How It Works](#-how-it-works)
+- [🚀 Tech Stack](#-tech-stack)
+- [🛠️ Project Setup](#️-project-setup)
+  - [Prerequisites](#prerequisites)
+  - [1. Backend](#1-backend)
+  - [2. Frontend](#2-frontend)
+  - [3. Chrome Extension](#3-chrome-extension)
+- [📂 Project Structure](#-project-structure)
+- [🤝 Contributing](#-contributing)
+- [🧑‍💻 Development Notes](#-development-notes)
+- [📝 License](#-license)
 
 ---
 
@@ -198,15 +210,6 @@ Contributions are welcome — from first-timers to experienced engineers!
 3. One issue at a time per contributor
 4. PRs should link to their issue: `Closes #42`
 
-### Good First Issues (no API keys needed)
-
-- Replace `alert()` calls with inline error messages (`frontend`)
-- Add file size validation to resume upload (`frontend`)
-- Deduplicate the footer component (`frontend`)
-- Fix extension name consistency — "Job Autofiller" vs "JobFlow" (`extension`)
-- Add demo screenshots to this README (`docs`)
-- Add root `.gitignore` (`devops`)
-
 ---
 
 ## 🧑‍💻 Development Notes
@@ -220,9 +223,3 @@ Contributions are welcome — from first-timers to experienced engineers!
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.
-
----
-
-<div align="center">
-  Made with ❤️ for GSSoC · <a href="https://github.com/mehrinshamim/mini-project/issues">Report Issues</a> · <a href="CONTRIBUTING.md">Contribute</a>
-</div>
