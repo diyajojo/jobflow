@@ -5,14 +5,18 @@ from app.api import jobs, resumes
 from app.api.extension_rest import router as extension_rest_router
 from app.api.extension_ws import router as extension_ws_router
 from app.core.db import create_db_and_tables, seed_default_user
+from app.core.config import settings
 
 app = FastAPI(title="Job Autofiller API", version="4.0.0")
 
+# Parse CORS_ORIGINS from settings (comma-separated list)
+cors_origins = [origin.strip() for origin in settings.CORS_ORIGINS.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=cors_origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 

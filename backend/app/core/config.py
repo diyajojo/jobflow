@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     APIFY_ACTOR_ID: str = "curious_coder/linkedin-jobs-scraper"
     LLM_MODEL: str = "llama-3.3-70b-versatile"
     SCORING_MODEL: str = "llama-3.1-8b-instant"
+    CORS_ORIGINS: str = "http://localhost:3000"  # Comma-separated list of allowed origins
 
 
 settings = Settings()
