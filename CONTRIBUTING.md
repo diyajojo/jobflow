@@ -27,25 +27,48 @@ JobFlow participates in **GirlScript Summer of Code (GSSoC)**. Here's how to par
 4. **Fork, work, and submit a PR** — link your PR to the issue using `Closes #<issue-number>`.
 5. **One issue at a time** — please don't claim multiple issues simultaneously.
 
-### Difficulty Labels
+### PR Labels
 
-| Label | What it means |
-|-------|--------------|
-| `good first issue` | No prior project knowledge needed. Ideal for beginners |
-| `level2` | Requires reading some existing code first |
-| `level3` | Architectural / advanced — discuss approach before starting |
+Maintainers apply these labels during review. Every merged PR is scored using them.
 
-### Issue Domains
+#### Difficulty (required)
 
-| Label | Area |
-|-------|------|
-| `frontend` | Next.js components and UI |
-| `backend` | FastAPI routes, services, Celery tasks |
-| `extension` | Chrome Extension (MV3) |
-| `docs` | Documentation improvements |
-| `testing` | Writing tests |
-| `ai/ml` | LLM integration, scoring, embeddings |
-| `devops` | CI/CD, Docker, setup |
+| Label | Description |
+|-------|-------------|
+| `level:beginner` | Minimal code change, no architectural knowledge needed |
+| `level:intermediate` | Requires reading existing code and understanding context |
+| `level:advanced` | Significant feature work, cross-component changes |
+| `level:critical` | Core architecture, breaking changes, or security-sensitive |
+
+#### Quality (optional)
+
+| Label | Description |
+|-------|-------------|
+| `quality:clean` | Well-structured code, good tests, clear commit messages |
+| `quality:exceptional` | Outstanding contribution — above and beyond expectations |
+
+#### Type (optional)
+
+| Label | Description |
+|-------|-------------|
+| `type:bug` | Bug fix |
+| `type:feature` | New feature |
+| `type:docs` | Documentation improvement |
+| `type:testing` | Adding or improving tests |
+| `type:security` | Security fix or hardening |
+| `type:performance` | Performance optimization |
+| `type:design` | UI/UX design improvement |
+| `type:refactor` | Code restructure without behavior change |
+
+### Scoring
+
+- **`gssoc:approved`** is added to every accepted PR and awards **+50 base points**.
+- Mentors add **`mentor:username`** to PRs they reviewed to earn mentor points.
+- **Score formula:**
+
+  ```
+  Score = 50 + (difficulty × quality) + type_bonus
+  ```
 
 ---
 
@@ -57,6 +80,9 @@ Before writing code, take 10–15 minutes to understand the architecture:
 2. **Read [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** — how the 3 components connect, data flow diagrams
 3. **Browse [`backend/docs/log.md`](backend/docs/log.md)** — engineering journal explaining *why* key decisions were made (highly recommended!)
 4. **Explore the API** — after starting the backend, visit `http://localhost:8000/docs` for interactive Swagger docs
+
+> [!NOTE]
+> **Single-user, local-first.** JobFlow runs on `localhost` with a single seeded user (`user_id=1`). There is no authentication or multi-user support — this is by design. Please don't file issues about missing auth or IDOR on endpoints; see [ARCHITECTURE.md](docs/ARCHITECTURE.md#why-user_id1-everywhere-local-first-single-user) for details.
 
 ### Quick Mental Model
 
@@ -240,6 +266,7 @@ uv run ruff check .
 | `style:` | CSS / formatting (no logic change) |
 
 ---
+
 
 ## Pull Request Checklist
 

@@ -80,6 +80,9 @@ The typical end-to-end flow has five stages:
 
 A default user (`id=1`, `email=local@autofiller.dev`) is seeded at startup for local use.
 
+> [!NOTE]
+> **No authentication by design.** JobFlow is a local-first, single-user tool. All endpoints use a hardcoded `user_id=1` — there is no login, JWT, or multi-user support. This is intentional; adding auth is tracked as a future enhancement for if/when the project moves to a hosted model.
+
 ## Environment Variables
 
 Copy `.env.example` to `.env` and fill in:

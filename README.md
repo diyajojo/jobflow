@@ -15,6 +15,11 @@ Upload your resume once. Get AI-ranked LinkedIn jobs. Apply in one click.
 
 ---
 
+> [!IMPORTANT]
+> **Local-First, Single-User Design** — JobFlow runs entirely on your local machine. A single default user (`user_id=1`) is seeded at startup, and all API endpoints use this fixed user ID. There is no authentication, login system, or multi-user support. This is by design — the app is a personal productivity tool, not a hosted multi-tenant service.
+
+---
+
 ## 📸 Screenshots
 
 | Landing Page | Guide | Dashboard |

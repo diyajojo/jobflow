@@ -214,8 +214,8 @@ Chrome extensions cannot access a webpage's `localStorage` directly due to secur
 ### Why inline styles in the frontend?
 The frontend was built quickly and uses inline `style={{}}` extensively for a consistent design. A refactor to Tailwind utility classes (or CSS modules) is an open contributor task — see `globals.css` for the existing CSS custom property tokens.
 
-### Why `user_id=1` everywhere?
-Authentication is out of scope for the initial version. All requests use a fixed `user_id=1`. This is a known architectural debt — adding JWT auth is a planned advanced contributor task.
+### Why `user_id=1` everywhere? (Local-first, single-user)
+JobFlow is designed as a **local-first, single-user** personal productivity tool. A single default user (`user_id=1`, `email=local@autofiller.dev`) is seeded at startup, and both the frontend and extension hardcode `user_id=1` in all API calls. There is no authentication layer, no login flow, and no multi-user support. This is **by design** — because the backend runs on `localhost`, there is no remote attack surface and no other user whose data could be accessed. IDOR (Insecure Direct Object Reference) concerns do not apply in this architecture. Adding JWT authentication is tracked as a future enhancement for if/when the project evolves into a hosted, multi-tenant service.
 
 ---
 
